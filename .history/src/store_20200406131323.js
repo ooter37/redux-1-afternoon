@@ -39,10 +39,10 @@ function reducer(state = initialState, action) {
             return {
                 state, ingredients: action.payload
             };
-        case INSTRUCTIONS:
-            return {
-                state, instructions: action.payload
-            }; 
+            case INSTRUCTIONS:
+                return {
+                    state, instructions: action.payload
+                }; 
         default: 
             return state;
     }

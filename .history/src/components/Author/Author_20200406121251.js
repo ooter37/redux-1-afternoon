@@ -6,10 +6,9 @@ import store, {AUTHOR_FIRST, AUTHOR_LAST} from '../../store'
 class Author extends Component {
   constructor(props) {
     super(props);
-    const retrievedState = store.getState()
     this.state = {
-      authorFirst: retrievedState.authorFirstName,
-      authorLast: retrievedState.authorLastName
+      authorFirst: '',
+      authorLast: ''
     };
   }
 

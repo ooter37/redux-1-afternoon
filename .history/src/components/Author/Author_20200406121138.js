@@ -6,10 +6,9 @@ import store, {AUTHOR_FIRST, AUTHOR_LAST} from '../../store'
 class Author extends Component {
   constructor(props) {
     super(props);
-    const retrievedState = store.getState()
     this.state = {
-      authorFirst: retrievedState.authorFirstName,
-      authorLast: retrievedState.authorLastName
+      authorFirst: '',
+      authorLast: ''
     };
   }
 
@@ -25,14 +24,7 @@ class Author extends Component {
     });
   }
   saveChanges() {
-    store.dispatch({
-      type: AUTHOR_FIRST,
-      payload: this.state.authorFirst
-    })
-    store.dispatch({
-      type: AUTHOR_LAST,
-      payload: this.state.authorLast
-    })
+    // Send data to Redux state
   }
   render() {
     return (

@@ -11,14 +11,6 @@ class Instructions extends Component {
       input: ""
     };
   }
-  componentDidMount(){
-    store.subscribe(() => {
-      const retrievedState = store.getState()
-      this.setState({
-        instructions: retrievedState.instructions
-      })
-    })
-  }
   handleChange(val) {
     this.setState({
       input: val

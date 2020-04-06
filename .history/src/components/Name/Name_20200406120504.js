@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Name.css";
-import store, {RECIPE_NAME, RECIPE_CATEGORY} from '../../store'
+import store, {NAME, CATEGORY} from '../../store'
 
 class Name extends Component {
   constructor(props) {
@@ -25,11 +25,11 @@ class Name extends Component {
   }
   saveChanges() {
     store.dispatch({
-      type: RECIPE_NAME,
+      type: NAME,
       payload: this.state.name
     })
     store.dispatch({
-      type: RECIPE_CATEGORY,
+      type: CATEGORY,
       payload: this.state.category
     })
   }

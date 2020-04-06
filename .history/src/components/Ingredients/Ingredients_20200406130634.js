@@ -5,19 +5,10 @@ import store, {INGREDIENTS} from '../../store'
 class Ingredients extends Component {
   constructor(props) {
     super(props);
-    const retrievedState = store.getState()
     this.state = {
-      ingredients: retrievedState.ingredients,
+      ingredients: [],
       input: ""
     };
-  }
-  componentDidMount(){
-    store.subscribe(() => {
-      const retrievedState = store.getState()
-      this.setState({
-        ingredients: retrievedState.ingredients
-      })
-    })
   }
   handleChange(val) {
     this.setState({
@@ -27,7 +18,7 @@ class Ingredients extends Component {
   addIngredient() {
     store.dispatch({
       type: INGREDIENTS,
-      payload: this.state.input
+      payload: this.state.ingredients
     })
     this.setState({
       input: ""

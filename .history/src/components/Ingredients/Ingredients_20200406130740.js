@@ -11,14 +11,6 @@ class Ingredients extends Component {
       input: ""
     };
   }
-  componentDidMount(){
-    store.subscribe(() => {
-      const retrievedState = store.getState()
-      this.setState({
-        ingredients: retrievedState.ingredients
-      })
-    })
-  }
   handleChange(val) {
     this.setState({
       input: val

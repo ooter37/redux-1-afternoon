@@ -1,23 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import store, {INSTRUCTIONS} from '../../store'
 
 class Instructions extends Component {
   constructor(props) {
     super(props);
-    const retrievedState = store.getState()
     this.state = {
-      instructions: retrievedState.instructions,
+      instructions: [],
       input: ""
     };
-  }
-  componentDidMount(){
-    store.subscribe(() => {
-      const retrievedState = store.getState()
-      this.setState({
-        instructions: retrievedState.instructions
-      })
-    })
   }
   handleChange(val) {
     this.setState({
@@ -25,10 +15,7 @@ class Instructions extends Component {
     });
   }
   addInstruction() {
-    store.dispatch({
-      type: INSTRUCTIONS,
-      payload: this.state.input
-    })
+    // Send data to Redux state
     this.setState({
       input: ""
     });

@@ -6,8 +6,7 @@ const initialState = {
     recipeCategory: '',
     authorFirstName: '',
     authorLastName: '',
-    ingredients: '',
-    instructions: ''
+    ingredients: ''
 }
 
 export const RECIPE_NAME = 'RECIPE_NAME'
@@ -15,7 +14,6 @@ export const RECIPE_CATEGORY = 'RECIPE_CATEGORY'
 export const AUTHOR_FIRST = 'AUTHOR_FIRST'
 export const AUTHOR_LAST = 'AUTHOR_LAST'
 export const INGREDIENTS = 'INGREDIENTS'
-export const INSTRUCTIONS = 'INSTRUCTIONS'
 
 function reducer(state = initialState, action) {
     switch (action.type) {
@@ -35,14 +33,6 @@ function reducer(state = initialState, action) {
             return {
                 state, authorLastName: action.payload
             };
-        case INGREDIENTS:
-            return {
-                state, ingredients: action.payload
-            };
-        case INSTRUCTIONS:
-            return {
-                state, instructions: action.payload
-            }; 
         default: 
             return state;
     }
