@@ -34,9 +34,7 @@ class Instructions extends Component {
     });
   }
   create() {
-    store.dispatch({
-      type: NEW_RECIPE
-    })
+    // Create new recipe in Redux state
   }
   render() {
     const instructions = this.state.instructions.map((instruction, i) => {

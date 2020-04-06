@@ -14,6 +14,7 @@ class Home extends Component {
   }
 
   render() {
+    console.log(this.state.recipes)
     const recipes = this.state.recipes.map((recipe, i) => {
       return (
         <RecipeCard

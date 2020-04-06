@@ -6,8 +6,8 @@ import store from '../../store'
 
 class Home extends Component {
   constructor(props) {
-    super(props);
     const retrievedState = store.getState()
+    super(props);
     this.state = {
       recipes: retrievedState.recipes
     };
@@ -18,10 +18,10 @@ class Home extends Component {
       return (
         <RecipeCard
           key={i}
-          name={recipe.recipeName}
-          category={recipe.recipeCategory}
-          authorFirst={recipe.authorFirstName}
-          authorLast={recipe.authorLastName}
+          name={recipe.name}
+          category={recipe.category}
+          authorFirst={recipe.authorFirst}
+          authorLast={recipe.authorLast}
           ingredients={recipe.ingredients}
           instructions={recipe.instructions}
         />

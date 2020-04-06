@@ -46,15 +46,11 @@ function reducer(state = initialState, action) {
                 ...state, instructions: [...state.instructions, action.payload]
             };
         case NEW_RECIPE: 
-        const {recipeName, recipeCategory, authorFirstName, authorLastName, ingredients, instructions} = state
+        // const {recipeName, recipeCategory, authorFirstName, authorLastName, ingredients, instructions} = state
         return {
             ...state, recipes: [...state.recipes, {
-                recipeName,
-                recipeCategory,
-                authorFirstName,
-                authorLastName,
-                ingredients,
-                instructions
+                this.state.recipeName
+
             }]
         }
         default: 

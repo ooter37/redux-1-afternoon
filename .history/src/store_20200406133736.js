@@ -17,7 +17,7 @@ export const AUTHOR_FIRST = 'AUTHOR_FIRST'
 export const AUTHOR_LAST = 'AUTHOR_LAST'
 export const INGREDIENTS = 'INGREDIENTS'
 export const INSTRUCTIONS = 'INSTRUCTIONS'
-export const NEW_RECIPE = 'NEW_RECIPE'
+export const RECIPES = 'RECIPES'
 
 function reducer(state = initialState, action) {
     switch (action.type) {
@@ -45,7 +45,7 @@ function reducer(state = initialState, action) {
             return {
                 ...state, instructions: [...state.instructions, action.payload]
             };
-        case NEW_RECIPE: 
+        case RECIPES: 
         const {recipeName, recipeCategory, authorFirstName, authorLastName, ingredients, instructions} = state
         return {
             ...state, recipes: [...state.recipes, {

@@ -18,6 +18,7 @@ export const AUTHOR_LAST = 'AUTHOR_LAST'
 export const INGREDIENTS = 'INGREDIENTS'
 export const INSTRUCTIONS = 'INSTRUCTIONS'
 export const NEW_RECIPE = 'NEW_RECIPE'
+export const CLEAR = 'CLEAR'
 
 function reducer(state = initialState, action) {
     switch (action.type) {
@@ -57,6 +58,8 @@ function reducer(state = initialState, action) {
                 instructions
             }]
         }
+        case CLEAR: 
+            
         default: 
             return state;
     }
