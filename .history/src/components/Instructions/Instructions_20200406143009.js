@@ -38,15 +38,6 @@ class Instructions extends Component {
       type: NEW_RECIPE
     })
   }
-  clear() {
-    store.dispatch({
-      type: CLEAR
-    })
-  }
-  clickTime() {
-    this.create()
-    this.clear()
-  }
   render() {
     const instructions = this.state.instructions.map((instruction, i) => {
       return <li key={i}>{instruction}</li>;
@@ -70,8 +61,7 @@ class Instructions extends Component {
           <button className='left_button'>Previous</button>
         </Link>
         <Link to="/">
-          <button className='right_button' 
-          onClick={() => this.clickTime()}>Create</button>
+          <button className='right_button' onClick={() => this.create()}>Create</button>
         </Link>
       </div>
     );

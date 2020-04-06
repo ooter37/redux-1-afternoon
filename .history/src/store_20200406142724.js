@@ -60,7 +60,6 @@ function reducer(state = initialState, action) {
         }
         case CLEAR: 
             return {
-                ...state,
                 recipeName: '',
                 recipeCategory: '',
                 authorFirstName: '',

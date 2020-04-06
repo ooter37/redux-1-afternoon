@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import store, {INSTRUCTIONS, NEW_RECIPE, CLEAR} from '../../store'
+import store, {INSTRUCTIONS, NEW_RECIPE} from '../../store'
 
 class Instructions extends Component {
   constructor(props) {
@@ -38,15 +38,6 @@ class Instructions extends Component {
       type: NEW_RECIPE
     })
   }
-  clear() {
-    store.dispatch({
-      type: CLEAR
-    })
-  }
-  clickTime() {
-    this.create()
-    this.clear()
-  }
   render() {
     const instructions = this.state.instructions.map((instruction, i) => {
       return <li key={i}>{instruction}</li>;
@@ -70,8 +61,7 @@ class Instructions extends Component {
           <button className='left_button'>Previous</button>
         </Link>
         <Link to="/">
-          <button className='right_button' 
-          onClick={() => this.clickTime()}>Create</button>
+          <button className='right_button' >Create</button>
         </Link>
       </div>
     );

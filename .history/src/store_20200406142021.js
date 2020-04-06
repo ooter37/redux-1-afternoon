@@ -59,8 +59,8 @@ function reducer(state = initialState, action) {
             }]
         }
         case CLEAR: 
+        const {recipeName, recipeCategory, authorFirstName, authorLastName, ingredients, instructions} = state
             return {
-                ...state,
                 recipeName: '',
                 recipeCategory: '',
                 authorFirstName: '',

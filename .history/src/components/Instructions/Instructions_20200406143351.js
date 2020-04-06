@@ -43,10 +43,6 @@ class Instructions extends Component {
       type: CLEAR
     })
   }
-  clickTime() {
-    this.create()
-    this.clear()
-  }
   render() {
     const instructions = this.state.instructions.map((instruction, i) => {
       return <li key={i}>{instruction}</li>;
@@ -71,7 +67,9 @@ class Instructions extends Component {
         </Link>
         <Link to="/">
           <button className='right_button' 
-          onClick={() => this.clickTime()}>Create</button>
+          onClick={() => this.create()}
+          onClick={() => this.clear()}
+          >Create</button>
         </Link>
       </div>
     );

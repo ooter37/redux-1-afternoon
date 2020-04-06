@@ -45,7 +45,6 @@ class Instructions extends Component {
   }
   clickTime() {
     this.create()
-    this.clear()
   }
   render() {
     const instructions = this.state.instructions.map((instruction, i) => {
